@@ -46,15 +46,13 @@ const SendOTP = (props) => {
         postData["contact"] = contact;
 
         // Calling send otp api.
-        // let apiResponse = await axios.post(BASEURL + "send-otp", postData);
+        let apiResponse = await axios.post(BASEURL + "send-otp", postData);
 
         // // Setting api response.
-        // setResponse(apiResponse);
+        setResponse(apiResponse);
 
         // On success response returned.
-        // if(apiResponse.data.status === "success"){   
-            if(true){
-                console.log("here")
+        if(apiResponse.data.status === "success"){
             // Storing contact number in local storage.
             localStorage.setItem("contact", "contact");
             
@@ -62,21 +60,21 @@ const SendOTP = (props) => {
             history.push("/verify-otp");
         } else{
             // Setting response.
-            // setResponse(apiResponse.data.data);
+            setResponse(apiResponse.data.data);
             
             // // If apiResponse.data.data is empty.
-            // if(apiResponse.data.data.length === 0){
-            //     // eslint-disable-next-line no-undef
-            //     toastr.error(apiResponse.data.message);
-            // }
+            if(apiResponse.data.data.length === 0){
+                // eslint-disable-next-line no-undef
+                toastr.error(apiResponse.data.message);
+            }
 
-            // else{                
-            //     // Displaying all errors response.
-            //     for(var key in apiResponse.data.data){
-            //         // eslint-disable-next-line no-undef
-            //         toastr.error(apiResponse.data.data[key]);
-            //     }
-            // }            
+            else{
+                // Displaying all errors response.
+                for(var key in apiResponse.data.data){
+                    // eslint-disable-next-line no-undef
+                    toastr.error(apiResponse.data.data[key]);
+                }
+            }            
         }
     }
 
