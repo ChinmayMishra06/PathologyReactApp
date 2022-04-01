@@ -216,7 +216,7 @@ const Navbar = (props) => {
                                                     </div>
                                                 </div>
                                             </NavLink>
-                                            <NavLink to="edit-profile" className="iq-sub-card iq-bg-primary-hover">
+                                            <NavLink to="/edit-profile" className="iq-sub-card iq-bg-primary-hover">
                                                 <div className="media align-items-center">
                                                     <div className="rounded iq-card-icon iq-bg-primary">
                                                         <i className="ri-profile-line"></i>

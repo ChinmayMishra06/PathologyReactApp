@@ -2,7 +2,7 @@
   "name": "pathology",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/ChinmayMishra06/PathologyReactApp",
+  "homepage": "https://ChinmayMishra06.github.io/PathologyReactApp",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
